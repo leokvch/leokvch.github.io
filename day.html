@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="heart.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Flower</title>
+    <style>
+        /* Agrega estilos según tus necesidades */
+        .comenzar-Button {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+          }
+          
+          .comenzar-Button button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Estilos para el botón transparente con bordes redondeados y sombreado */
+            background-color: transparent;
+            border: 3px  #000; /* Color del contorno del botón */
+            border-radius: 10px; /* Radio de los bordes para hacerlos redondeados */
+            color: white;
+            font-family: "Josefin Slab", serif; /* Cambia el color del texto según tus preferencias */
+            font-size: 16px;
+            cursor: pointer;
+            opacity: 0.7; /* Ajusta la opacidad según tus preferencias */
+            padding: 10px 20px; /* Ajusta el espacio dentro del botón */
+            box-shadow: 3px 3px 5px #888888; /* Sombra para el contorno del botón */
+          }
+          .comenzar-Button h1{
+            color: white;
+            font-family: "Josefin Slab", serif;
+           
+            transform: translate(0%, -60%);
+          }
+
+        .etapa-siguiente {
+            /* Estilos para la siguiente etapa, inicialmente oculta */
+            display: none;
+        }
+    </style>
+    <title>SOFIA</title>
+</head>
+<body>
+
+<div id="bienvenida" class="comenzar-Button">
+    <!-- Contenido de la animación de bienvenida -->
+    <h1>Solo haz Click <br>ಠ_ಠ</h1>
+    <button id="comenzarButton">Click</button>
+</div>
+
+<div id="etapaSiguiente" class="etapa-siguiente">
+    <!-- Contenido de la siguiente etapa (código que proporcionaste anteriormente) -->
+    <div class="corazon">
+        <img src="cora5.jpg" alt="Flower Image" class="flower-image zoom-animation">
+
+        <div class="text-above"></div>
+        <div class="text-below">FELIZ CUMPLE SOFI!! <br>Bienvenida a tus 20s</div>
+        <div class="fasteracademy">Cupon valido para pedirme lo que sea</div>
+        <div class="hola">
+        </div>
+    </div>
+</div>
+
+<script>
+    // Función para ocultar la animación de bienvenida, mostrar la siguiente etapa y reproducir la música
+    function mostrarSiguienteEtapa() {
+        var bienvenida = document.getElementById('bienvenida');
+        var etapaSiguiente = document.getElementById('etapaSiguiente');
+        var audioPlayer = new Audio('cancion2.mp3'); // Crear objeto de audio
+
+        bienvenida.style.opacity = 0;
+        setTimeout(function() {
+            bienvenida.style.display = 'none';
+            etapaSiguiente.style.display = 'block';
+            audioPlayer.play(); // Inicia la reproducción de la música
+        }, 1000); // Tiempo de transición en milisegundos
+    }
+
+    // Evento de clic en el botón "Comenzar"
+    document.getElementById('comenzarButton').addEventListener('click', mostrarSiguienteEtapa);
+
+    
+</script>
+
+</body>
+</html>
